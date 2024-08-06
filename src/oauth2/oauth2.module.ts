@@ -20,14 +20,16 @@ import { PassportModule } from '@nestjs/passport';
 
   ],
 
-  controllers: [
-    AuthController
-  ],
+  controllers: [AuthController],
 
   providers: [
+
     AuthService,
+
     DiscordStrategy,
+
     SessionSerializer
+
   ]
 
 })

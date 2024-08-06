@@ -11,7 +11,6 @@ import { ConfigModule } from '@nestjs/config'
     ConfigModule.forRoot({}),
 
     TypeOrmModule.forRoot({
-
       type: 'mysql',
       host: process.env.DATABASE_HOST,
       port: Number.parseInt(process.env.DATABASE_PORT),
@@ -20,7 +19,6 @@ import { ConfigModule } from '@nestjs/config'
       database: process.env.DATABASE_NAME,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true
-
     }),
 
     AuthModule,

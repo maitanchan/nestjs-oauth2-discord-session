@@ -12,10 +12,15 @@ async function bootstrap() {
   app.use(session({
 
     cookie: {
+
       maxAge: 60000 * 60 * 24
+
     },
+
     secret: 'secret-key',
+
     resave: false,
+
     saveUninitialized: false
 
   }))

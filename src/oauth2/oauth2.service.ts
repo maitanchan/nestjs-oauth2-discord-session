@@ -21,7 +21,9 @@ export class AuthService implements AuthProvider {
         const user = await this.userRepo.findOne({ where: { discordId: userDetail.discordId } })
 
         if (user) {
+
             return user
+
         }
 
         return await this.createUser(userDetail)
@@ -51,10 +53,6 @@ export class AuthService implements AuthProvider {
 
     }
 
-    logout() {
-
-
-
-    }
+    logout() { }
 
 }
